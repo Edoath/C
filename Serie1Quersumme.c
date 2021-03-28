@@ -4,7 +4,7 @@
 int
  main(int argc,char *argv[]){
     char input[100];
-    fgets(input,100,stdin); // COMMITTESTschreibt den Standard input in das Array Input.
+    fgets(input,100,stdin); // COMMITTEST2schreibt den Standard input in das Array Input.
 
    int counter = 0;
    int result = 0;
