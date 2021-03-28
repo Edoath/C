@@ -1,0 +1,84 @@
+C_Aufgabe2
+Aufgabe
+Erstellen Sie jeweils Funktionalitäten, welche für nachfolgende Strings unten stehende Aufgaben erfüllt
+
+char str1[]="HalloWelt";
+char str2[]="Ich";
+Char str3[]="?";
+int  var=4711;
+char str4[]="1234";
+char str5[]="Der String %s hat keine Bedeutung";
+    tr1 und Str2 zu einem String verbinden (Konkatinierung) ohne Nutzung von strcat() / strcpy()
+        Str1 und Str2 zu einem String verbindet (Konkatinierung) unter Nutzung von strcpy()
+    Str1 und str2 zu einem String verbinden (Konkatinierung) unter Nutzung von strcat()
+Welche Bedeutung hat das n bei der strncpy()-Funktion. Lesen Sie sich dazu die Man-Pages durch und überlegen sich, was dies bedeutet, wenn die Arraygröße von src größer, gleich oder kleiner als dst ist.
+Welche Bedeutung hat das n bei der strncat()-Funktion.
+Den Inhalt der Integervariable var in einen String wandelt. (Var kann natürlich jede Integerzahl annehmen)
+Den Inhalt des Strings str4 in eine Integervariable wandelt. (Str4 kann natürlich jeden Inhalt annehmen)
+Im Str5 den Teilstring "%s" suchen und diesen gegen den Inhalt von str1,str2 oder str3 austauschen
+In Java sieht eine Switch-Anweisung über Strings wie folgt aus
+String str=new String("du");
+switch (str) {
+    case "hallo":
+        System.out.println("hallo");
+        break;
+    case "du":
+        System.out.println("du");
+        break;
+}
+Realisieren sie diese Switch-Anweisung in C.
+Wenn viele Case-Argumente vorhanden sind, könnte die Auswertung der switch Anweisung viel Rechenleistung benötigen. Überlegen sie sich theoretisch, wie dies Optimaler erfolgen könnte.
+
+ Hinweis:
+In dieser Aufgabe werden sie i.d.R. Arrayzugriffe außerhalb des reservierten Speicherbereiches entweder direkt oder indirekt über die Funktionsaufrufe Bibliotheksfunktion der Standard-C-Library tätigen. Zur Verdeutlichung dieser Pufferüberläufe empfiehlt sich die Nutzung des Compiler-Schalters '-fsanitize=address'  bei Nutzung des GCC oder CLANG C-Compilers. (Aufruf siehe Anhang). Versuchen sie diese Pufferüberläufe zu finden und zu lösen.
+Ebenfalls werden sie in der Aufgabe Variable Length Arrays nutzen. Bitte beachten sie hierzu die Hinweise im Skript.
+Folgende Bibliotheksfunktionen sind erlaubt: strcpy(), strcat(), strlen(), strcnpy(), strncat().
+Die Spezifikation dieser Funktionen finden sie bspw. in ihrer Linux-Bash mittels >>'man strcpy', unter www.die.net  oder alternativ im Browser ergänzend zum Funktionsnamen 'man' als Suchkriterium eingeben. 
+D.h. C-Library Funktionen wie sprintf() atoi() strtol() oder scanf() dürfen nicht genutzt werden.
+Reservieren sie nur so viel Speicher für den Zielstring, wie unbedingt nötig
+Bitte Gliedern sie die Aufgaben nicht in einzelne Funktionen aus, sondern schreiben alles hintereinander in die main-Funktion. Beispielsweise in der Form
+int main(int argc, char *argv[]) {
+    char str1[]="HalloWelt";
+    char str2[]="Ich";
+   char str3[]="?";
+    int var=4711;
+     …
+ 
+    int aufgabe=1;
+    switch(aufgabe) {
+        case 1: {
+        }
+        Case 2: {
+        }
+       …
+   }
+}
+int main(int argc, char *argv[]) {
+   char str1[]="HalloWelt";
+    char str2[]="Ich";
+   char str3[]="?";
+    int var=4711;
+    …
+ 
+#if 0  //AUFGABE 1
+ 
+#endif
+#if 1   //Aufgabe 2
+ 
+#endif
+  …
+}
+
+
+Anhang
+Compilerschalter
+Im Compiler Explorer können sie Compiler-Schalter im Feld 'Compiler options…'  im 'Execution Fenster' eingeben. Dazu muss mit dem Schalter 'Compilation' diese Zeile ggf. erst sichtbar gemacht werden. Wenn sie mit links auf den grünen Haken klicken, bekommen sie alle Compiler-Schalter aktiven Compiler-Schalter angezeigt
+
+
+
+In einer Bash ergänzen sie bitte beim Compiler-Aufruf einfach diese Anweisung händisch
+
+>> gcc -fsanitize=address  main.c -ooutput
+Gestartet wird die Anwendung wie gewohnt mit
+
+>>./output
