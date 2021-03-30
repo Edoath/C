@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
         printf("Lösung von Aufgabe %d: %s\n", aufgabe, result);
     }
     break;
-    
+
     case 2:
     {
 
@@ -104,5 +104,6 @@ int main(int argc, char *argv[])
         // In Java sieht eine Switch-Anweisung über Strings wie folgt aus
         break;
     }
+    
     }
 }
